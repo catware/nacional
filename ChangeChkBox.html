@@ -1,0 +1,30 @@
+<script type="text/javascript">
+function checkAll(formname, checktoggle)
+{
+     var checkboxes = new Array();
+      checkboxes = document[formname].getElementsByTagName('input');
+      for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].type === 'checkbox') {
+               checkboxes[i].checked = checktoggle;
+          }
+      }
+}
+</script>
+
+<form name="myform">
+<li>
+   <label class="cba">
+         <a href="javascript:void();" onclick="javascript:checkAll('myform', true);">Check All</a> | 
+         <a href="javascript:void();" onclick="javascript:checkAll('myform', false);">UnCheck All</a>
+   </label>
+</li>
+<li>
+    <input class="cba" type="checkbox" name="content1" value="1" />
+</li>
+<li>
+    <input class="cbc" type="checkbox" name="content2" value="2" />
+</li>
+<li>
+    <input class="cbx" type="checkbox" name="content3" value="3"/>
+</li>
+</form>
